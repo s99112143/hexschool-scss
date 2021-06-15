@@ -1,0 +1,939 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "PingFang","Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.header {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 9px;
+}
+
+.header h1 a {
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/d%E2%80%99Perfume.png?raw=true);
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  width: 128px;
+  height: 38px;
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu a {
+  text-decoration: none;
+  color: #8D8D8D;
+  padding-left: 30px;
+}
+
+.header .menu i {
+  padding-right: 3px;
+}
+
+.header a:hover {
+  color: #AC8A46;
+}
+
+@media (max-width: 1140px) {
+  .header .mobile-hide {
+    display: none;
+  }
+}
+
+.header .pc-hide {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .header .pc-hide {
+    display: block;
+  }
+}
+
+.banner {
+  max-width: 100%;
+  height: 870px;
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true");
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 1140px) {
+  .banner {
+    width: 100%;
+    height: 480px;
+  }
+}
+
+.banner .shopnow-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.banner .shopnow-wrap .shopnow {
+  width: 445px;
+  position: absolute;
+  right: 0px;
+  top: 295px;
+}
+
+@media (max-width: 1140px) {
+  .banner .shopnow-wrap .shopnow {
+    width: 330px;
+    right: 15px;
+    top: 101px;
+  }
+}
+
+.banner .shopnow-wrap .shopnow h2 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+@media (max-width: 1140px) {
+  .banner .shopnow-wrap .shopnow h2 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+.banner .shopnow-wrap .shopnow p {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 1140px) {
+  .banner .shopnow-wrap .shopnow p {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.banner .shopnow-wrap .shopnow button {
+  border-radius: 60px;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+}
+
+.banner .shopnow-wrap .shopnow button a {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 16px;
+  display: block;
+  width: 330px;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 8px 0;
+}
+
+@media (max-width: 1140px) {
+  .banner .shopnow-wrap .shopnow button a {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 30px;
+    width: 330px;
+  }
+}
+
+.banner .shopnow-wrap .shopnow button a:hover {
+  color: #AC8A46;
+}
+
+.banner .shopnow-wrap .shopnow button:hover {
+  border: 2px solid #AC8A46;
+}
+
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+}
+
+.container .gabrielle-wrap-row-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .gabrielle-wrap-row-reverse img {
+  max-width: 100%;
+  height: 100%;
+  padding-right: 15px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-reverse img {
+    padding-right: 0;
+  }
+}
+
+.container .gabrielle-wrap-row-reverse .gabrielle-text {
+  padding-top: 129px;
+  padding-left: 90px;
+  width: 350px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-reverse .gabrielle-text {
+    width: 330px;
+    padding-top: 8px;
+    padding-left: 0px;
+    padding-bottom: 32px;
+  }
+}
+
+.container .gabrielle-wrap-row-reverse .gabrielle-text h3 {
+  color: #212529;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.container .gabrielle-wrap-row-reverse .gabrielle-text p {
+  color: #212529;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 16px;
+}
+
+.container .gabrielle-wrap-row-reverse .gabrielle-text a {
+  color: #AC8A46;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #AC8A46;
+}
+
+.container .gabrielle-wrap-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .gabrielle-wrap-row img {
+  max-width: 100%;
+  height: 100%;
+  padding-left: 15px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row img {
+    padding-left: 0;
+  }
+}
+
+.container .gabrielle-wrap-row .gabrielle-text {
+  padding-top: 129px;
+  padding-right: 90px;
+  width: 350px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row .gabrielle-text {
+    width: 330px;
+    padding-top: 8px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 32px;
+  }
+}
+
+.container .gabrielle-wrap-row .gabrielle-text h3 {
+  color: #212529;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.container .gabrielle-wrap-row .gabrielle-text p {
+  color: #212529;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 16px;
+}
+
+.container .gabrielle-wrap-row .gabrielle-text a {
+  color: #AC8A46;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #AC8A46;
+}
+
+.container .gabrielle-wrap-row-long {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-long {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .gabrielle-wrap-row-long img {
+  max-width: 100%;
+  height: 100%;
+  padding-left: 15px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-long img {
+    padding-left: 0;
+  }
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text {
+  padding-top: 129px;
+  padding-right: 90px;
+  width: 350px;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-long .gabrielle-text {
+    width: 330px;
+    padding-top: 8px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 32px;
+  }
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text h4 {
+  color: #212529;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text p {
+  color: #212529;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 52px;
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text a {
+  color: #AC8A46;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #AC8A46;
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text button {
+  border-radius: 60px;
+  border: 2px solid #212529;
+  background-color: transparent;
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text button a {
+  color: #212529;
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  width: 330px;
+  text-decoration: none;
+  color: #212529;
+  padding: 8px 0;
+}
+
+@media (max-width: 1140px) {
+  .container .gabrielle-wrap-row-long .gabrielle-text button a {
+    color: #212529;
+    font-size: 20px;
+    line-height: 30px;
+    width: 330px;
+  }
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text button a:hover {
+  color: #AC8A46;
+}
+
+.container .gabrielle-wrap-row-long .gabrielle-text button:hover {
+  border: 2px solid #AC8A46;
+}
+
+.main {
+  background-color: #E0E0E0;
+}
+
+.main .main-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 1140px) {
+  .main .main-wrap {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .main-wrap .main-content {
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .main .main-wrap .main-content {
+    padding-bottom: 32px;
+  }
+}
+
+.main .main-wrap .main-content img {
+  max-width: 100%;
+}
+
+@media (max-width: 1140px) {
+  .main .main-wrap .main-content img {
+    margin-top: -180px;
+    margin-bottom: -10px;
+  }
+}
+
+.main .main-wrap .main-content .soldout {
+  background-color: #212529;
+  opacity: 0.5;
+  width: 350px;
+  height: 540px;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 1140px) {
+  .main .main-wrap .main-content .soldout {
+    height: 360px;
+  }
+}
+
+.main .main-wrap .main-content .soldout p {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 16px;
+  text-align: center;
+  padding-top: 252px;
+}
+
+@media (max-width: 1140px) {
+  .main .main-wrap .main-content .soldout p {
+    padding-top: 157px;
+  }
+}
+
+.main .main-wrap .main-content h4 {
+  padding: 5px 0;
+  color: #212529;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.main .main-wrap .main-content .p-b-16 {
+  padding-bottom: 16px;
+}
+
+.main .main-wrap .main-content p {
+  color: #212529;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main .main-wrap .main-content p span {
+  color: #8D8D8D;
+  text-decoration: line-through;
+  padding-left: 8px;
+}
+
+.content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 1140px) {
+  .content {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+}
+
+.content .gabrielle-wrap-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1140px) {
+  .content .gabrielle-wrap-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.content .gabrielle-wrap-row img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.content .gabrielle-wrap-row .gabrielle-text {
+  padding-top: 82px;
+  padding-left: 30px;
+  width: 350px;
+}
+
+@media (max-width: 1140px) {
+  .content .gabrielle-wrap-row .gabrielle-text {
+    width: 330px;
+    padding-top: 8px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 32px;
+  }
+}
+
+.content .gabrielle-wrap-row .gabrielle-text h3 {
+  color: #212529;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.content .gabrielle-wrap-row .gabrielle-text p {
+  color: #212529;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+
+.content .gabrielle-wrap-row .gabrielle-text a {
+  color: #AC8A46;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #AC8A46;
+}
+
+.foot {
+  max-width: 100%;
+  height: 600px;
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true);
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 1140px) {
+  .foot {
+    width: 100%;
+  }
+}
+
+.foot .moreinformation {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 312px;
+}
+
+.foot .moreinformation h3 {
+  color: #8D8D8D;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.foot .moreinformation div {
+  position: relative;
+}
+
+.foot .moreinformation div .email-form {
+  position: absolute;
+  color: #8D8D8D;
+  font-size: 16px;
+  line-height: 24px;
+  border: 2px solid #AC8A46;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.foot .moreinformation div .email-submit {
+  position: absolute;
+  z-index: 2;
+  left: 219px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #AC8A46;
+  border: 2px solid #AC8A46;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.footer {
+  background-color: #AC8A46;
+  padding: 20px 0;
+}
+
+.footer .footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer .footer-wrap div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-wrap div h1 a {
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/d%E2%80%99Perfumewhite.png?raw=true);
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  width: 128px;
+  height: 38px;
+}
+
+.footer .footer-wrap div p {
+  padding-left: 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 230px;
+}
+
+@media (max-width: 1140px) {
+  .footer ul {
+    display: none;
+  }
+}
+
+.footer ul a {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.submenu {
+  padding: 14px 0;
+  background-color: #AC8A46;
+}
+
+@media (max-width: 1140px) {
+  .submenu {
+    display: none;
+  }
+}
+
+.submenu div {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.submenu div .submenu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.submenu div li {
+  padding-right: 28px;
+}
+
+.submenu div li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 1140px) {
+  .login {
+    padding-top: 50px;
+    padding-bottom: 110px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.login img {
+  max-width: 100%;
+}
+
+.login div h3 {
+  color: #212529;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.login div label {
+  color: #212529;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+
+.login div input {
+  display: block;
+  width: 326px;
+  padding: 8px 12px;
+  border: 1px solid #E0E0E0;
+}
+
+.login div .loginbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  padding-top: 36px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1140px) {
+  .login div .loginbar {
+    padding-top: 28px;
+  }
+}
+
+.login div .loginbar a {
+  color: #AC8A46;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #AC8A46;
+}
+
+.login div .loginbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login div .loginbar ul .btn-register {
+  width: 65px;
+  color: #AC8A46;
+  background-color: transparent;
+  border: 1px solid #AC8A46;
+}
+
+.login div .loginbar ul .btn-login {
+  width: 65px;
+  color: #FFFFFF;
+  background-color: #AC8A46;
+  border: 1px solid #AC8A46;
+  margin-left: 25px;
+}
+/*# sourceMappingURL=all.css.map */

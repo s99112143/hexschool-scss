@@ -1,0 +1,523 @@
+body{
+    font-family:"PingFang","Segoe UI", "Microsoft JhengHei", Roboto,
+		 "Helvetica Neue", Arial, sans-serif;
+}
+.header{
+    @include m0auto(1140px);
+    justify-content: space-between;
+    align-items: center;
+    display:flex; 
+    margin-top: 9px;   
+    h1{
+        a{
+            background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/d%E2%80%99Perfume.png?raw=true);
+            @include hide-text-logo;
+        }
+    }
+    .menu{
+        display: flex;
+        a{
+            @include a-reset(#8D8D8D);
+            padding-left: 30px;             
+            }
+            i {
+                padding-right: 3px;
+            }           
+        }
+        a:hover{
+            color:#AC8A46;
+        }
+        .mobile-hide{
+            @include mobile{
+                display:none;
+            }
+        }
+        .pc-hide{
+            display:none;
+            @include mobile{
+                display:block;
+        }
+    }
+    
+
+}
+
+.banner{
+    max-width: 100%;
+    height: 870px;
+    background-image:url('https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true');
+    background-position:center center;
+    background-size:cover;    
+    @include mobile{
+        width: 100%;
+        height: 480px;
+    }
+    .shopnow-wrap{
+        @include m0auto(1140px);
+        position: relative;
+        .shopnow{
+            width: 445px;        
+            position: absolute;
+            right: 0px;
+            top:295px;        
+            @include mobile{
+                width: 330px; 
+                right: 15px;
+                top:101px;         
+            }
+            h2{
+                @include text-h2-pc($color-light);
+                @include mobile{
+                    @include text-h2-mobile;
+                }
+            }
+            p{
+                @include text-p-l($color-light);
+                @include mobile{
+                    @include text-p-m($color-light);
+                }
+            }
+            button{
+                border-radius:60px;
+                border: 2px solid $color-light;
+                background-color: transparent;            
+                a{
+                    @include text-p-l($color-light);
+                    display: block;
+                    width: 330px;
+                    @include a-reset($color-light);
+                    padding: 8px 0;
+                    @include mobile{
+                        @include text-p-m($color-light);
+                        width: 330px;
+                    }
+                }
+                a:hover{
+                    color:$color-primary;
+                }
+                
+            }
+            button:hover{
+                border:2px solid $color-primary;
+            }
+        }    
+    }      
+ }
+ .container{
+     padding-top: 60px;
+     padding-bottom:60px;
+     @include mobile{
+        padding-top: 40px;
+        padding-bottom:0px;
+     }
+    @include m0auto(1140px);
+    .gabrielle-wrap-row-reverse{
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        @include mobile{
+            flex-direction:column;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            @include mobile{
+                padding-right: 0;
+            }
+        }
+        .gabrielle-text{
+            padding-top: 129px;
+            padding-left: 90px;
+            width: 350px;
+            @include mobile{
+                width: 330px;
+                padding-top: 8px;
+                padding-left: 0px;
+                padding-bottom: 32px;
+            }
+            h3{
+                @include text-h3-pc($color-dark);
+            }
+            p{
+                @include text-p-m($color-dark);
+                padding-bottom: 16px;
+            }
+            a{
+                @include text-seemore(#AC8A46);
+                @include a-reset(#AC8A46);
+            }
+        }
+    }
+    .gabrielle-wrap-row{
+        display:flex;
+        justify-content:space-between;
+        @include mobile{
+            flex-direction:column;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            padding-left: 15px;
+            @include mobile{
+                padding-left: 0;
+            }
+        }
+        .gabrielle-text{
+            padding-top: 129px;
+            padding-right: 90px;
+            width: 350px;
+            @include mobile{
+                width: 330px;
+                padding-top: 8px;
+                padding-right: 0px;
+                padding-left: 0px;
+                padding-bottom: 32px;
+            }
+            h3{
+                @include text-h3-pc($color-dark);
+            }
+            p{
+                @include text-p-m($color-dark);
+                padding-bottom:16px;
+            }
+            a{
+                @include text-seemore(#AC8A46);
+                @include a-reset(#AC8A46);
+            }
+        }
+    }
+    .gabrielle-wrap-row-long{
+        display:flex;
+        justify-content:space-between;
+        @include mobile{
+            flex-direction:column;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            padding-left: 15px;
+            @include mobile{
+                padding-left: 0;
+            }
+        }
+        .gabrielle-text{
+            padding-top: 129px;
+            padding-right: 90px;
+            width: 350px;
+            @include mobile{
+                width: 330px;
+                padding-top: 8px;
+                padding-right: 0px;
+                padding-left: 0px;
+                padding-bottom: 32px;
+            }
+            h4{
+                @include text-h4-pc($color-dark);
+            }
+            p{
+                @include text-p-s($color-dark);
+                padding-bottom: 52px
+            }
+            a{
+                @include text-seemore(#AC8A46);
+                @include a-reset(#AC8A46);
+            }
+            button{
+                border-radius:60px;
+                border: 2px solid $color-dark;
+                background-color: transparent;            
+                a{
+                    @include text-p-m($color-dark);
+                    display: block;
+                    width: 330px;
+                    @include a-reset($color-dark);
+                    padding: 8px 0;
+                    @include mobile{
+                        @include text-p-m($color-dark);
+                        width: 330px;
+                    }
+                }
+                a:hover{
+                    color:$color-primary;
+                }
+                
+            }
+            button:hover{
+                border:2px solid $color-primary;
+            }
+        }
+    }
+ }
+ .main{
+     background-color: $color-secondary-light;   
+     .main-wrap{
+         display:flex;
+         justify-content:space-between;
+         padding-top: 40px;
+         padding-bottom: 40px;
+         @include m0auto(1140px);        
+         @include mobile{
+            padding-top: 32px;
+            padding-bottom: 32px;
+            flex-direction:column;
+         }
+        .main-content{
+            overflow: hidden;
+            position: relative;
+            @include mobile{
+                padding-bottom: 32px;
+            }
+            img{
+                max-width: 100%;
+                @include mobile{
+                margin-top: -180px;
+                margin-bottom: -10px; 
+                }        
+            }
+            .soldout{
+                background-color: $color-dark;
+                opacity: 0.5;
+                width:350px;
+                height: 540px;
+                position:absolute;
+                top:0;
+                @include mobile{
+                    height: 360px;
+                }
+                p{
+                    @include text-p-l($color-light);
+                    text-align: center;
+                    padding-top: 252px;
+                    @include mobile{
+                        padding-top:157px;
+                    }
+                }
+            }            
+            h4{
+                padding: 5px 0;
+                @include text-h4-pc($color-dark);
+            }
+            .p-b-16{
+                padding-bottom: 16px;
+            }
+            p{
+                @include text-p-s($color-dark);
+                span{
+                    color:$color-secondary;
+                    text-decoration:line-through;
+                    padding-left: 8px;
+                }
+            }
+        }         
+     }        
+ }
+ .content{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include mobile{
+        padding-top: 40px;
+        padding-bottom:0px;
+     }
+     @include m0auto(1140px);
+    .gabrielle-wrap-row{
+        display:flex;
+        justify-content:space-between;
+        @include mobile{
+            flex-direction:column;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+        .gabrielle-text{
+            padding-top: 82px;
+            padding-left: 30px;
+            width: 350px;
+            @include mobile{
+                width: 330px;
+                padding-top: 8px;
+                padding-right: 0px;
+                padding-left: 0px;
+                padding-bottom: 32px;
+            }
+            h3{
+                @include text-h3-pc($color-dark);
+            }
+            p{
+                @include text-p-s($color-dark);
+                padding-bottom:16px;
+            }
+            a{
+                @include text-seemore(#AC8A46);
+                @include a-reset(#AC8A46);
+            }
+        }
+    }
+ }
+ .foot{
+    max-width: 100%;
+    height: 600px;
+    background-image:url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true);
+    background-position:center center;
+    background-size:cover;    
+    @include mobile{
+        width: 100%;
+    }
+    .moreinformation{
+        @include m0auto(1140px);
+        padding-top: 312px;
+        h3{
+            @include text-h3-pc($color-secondary);
+        }
+        div{
+            position: relative;
+            .email-form{
+                position: absolute;
+                @include text-p-s($color-secondary);
+                border: 2px solid $color-primary;
+                padding:20px;
+                margin-top: 20px;
+                border-radius:4px;
+                z-index:1;
+            }        
+            .email-submit{
+                position: absolute;
+                z-index:2;
+                left:219px;
+                @include text-p-s($color-light);
+                background-color:$color-primary ;
+                border: 2px solid $color-primary;
+                padding:20px;
+                margin-top: 20px;
+                border-radius:4px;            
+            }   
+        }
+
+    }
+    
+ }
+ .footer{
+    background-color: $color-primary;
+    padding: 20px 0;
+    .footer-wrap{
+        display:flex;
+        justify-content:space-between;
+        @include m0auto(1140px);
+        div{
+            display:flex;
+            align-items:center;
+            h1{
+                a{
+                    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/d%E2%80%99Perfumewhite.png?raw=true);
+                    @include hide-text-logo;
+                }
+            }
+            p{
+                padding-left: 20px;
+                @include text-p-xs($color-light);
+            }            
+        }
+
+    }
+    ul{
+        display:flex;
+        justify-content:space-between;
+        width: 230px;
+        @include mobile{
+            display:none;
+        }
+        a{
+            @include text-p-m($color-light);
+            @include a-reset($color-light);
+        }
+    }
+   
+ }
+ .submenu{
+     padding:14px 0;
+    background-color: $color-primary;
+    @include mobile{
+        display:none;
+    }
+    div{
+        @include m0auto(1140px);
+        .submenu-list{
+            display:flex;
+            flex-wrap:wrap;
+            @include m0auto(1140px);
+        }
+        li{
+            padding-right: 28px;
+            a{
+                @include a-reset($color-light);
+                @include a-reset($color-light);                
+            }
+        }
+
+    }
+   
+ }
+ .login{
+     display: flex;
+     align-items: center;
+     padding:80px 0;
+     justify-content:space-between;
+     @include mobile{
+        padding-top: 50px;
+        padding-bottom:110px;
+        flex-direction:column;
+    }
+    @include m0auto(1140px);
+    img{
+        max-width: 100%;
+    }
+    div{
+        h3{
+            @include text-h3-pc($color-dark) ;
+        }
+        label{
+            @include text-p-s($color-dark);
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 4px;
+        }
+        input{
+            display: block;
+            width:326px;
+            padding:8px 12px;
+            border: 1px solid $color-secondary-light;
+        }
+        .loginbar{
+            display:flex;
+            width:350px;
+            padding-top: 36px;
+            justify-content:space-between;
+            align-items: center;
+            @include mobile{
+                padding-top: 28px;
+            }
+            a{
+                @include text-p-s($color-primary);
+                @include a-reset($color-primary);
+            }
+            ul{
+                display:flex;
+                .btn-register{
+                    width:65px;
+                    color:$color-primary;
+                    background-color:transparent;
+                    border: 1px solid $color-primary;
+                }
+                .btn-login{
+                    width:65px;
+                    color:$color-light;
+                    background-color:$color-primary;
+                    border: 1px solid $color-primary;
+                    margin-left: 25px;
+                }
+            }
+
+        }
+    }
+ }
